@@ -91,8 +91,8 @@
         <i class="fa fa-caret-down"></i>
     </button>
       <div class="dropdown-container animate__animated animate__fadeInDown">
-        <a href="{{ asset('hotspotuser') }}"><font style="color:red">├</font> Data</a>
-        <a href="{{ asset('hotspotuser/create') }}"><font style="color:red">└</font> Tambah</a>
+        <a href="{{ asset('userwifi') }}"><font style="color:red">├</font> Data</a>
+        <a href="{{ asset('userwifi/create') }}"><font style="color:red">└</font> Tambah</a>
       </div>
 
         @guest

@@ -35,9 +35,9 @@ Route::get('/datarumah/{id}/edit', [App\Http\Controllers\WifirumahController::cl
 Route::post('/datarumah', [App\Http\Controllers\WifirumahController::class, 'update']);
 Route::get('/datarumah/{id}/del', [App\Http\Controllers\WifirumahController::class, 'delete']);
 
-Route::get('/hotspotuser', [App\Http\Controllers\WifirumahController::class, 'index']);
-Route::get('/hotspotuser/create', [App\Http\Controllers\WifirumahController::class, 'create']);
-Route::post('/hotspotuser/create', [App\Http\Controllers\WifirumahController::class, 'store']);
-Route::get('/hotspotuser/{id}/edit', [App\Http\Controllers\WifirumahController::class, 'edit']);
-Route::post('/hotspotuser', [App\Http\Controllers\WifirumahController::class, 'update']);
-Route::get('/hotspotuser/{id}/del', [App\Http\Controllers\WifirumahController::class, 'delete']);
+Route::get('/userwifi', [App\Http\Controllers\UserwifiController::class, 'index']);
+Route::get('/userwifi/create', [App\Http\Controllers\UserwifiController::class, 'create']);
+Route::post('/userwifi/create', [App\Http\Controllers\UserwifiController::class, 'store']);
+Route::get('/userwifi/{id}/edit', [App\Http\Controllers\UserwifiController::class, 'edit']);
+Route::post('/userwifi', [App\Http\Controllers\UserwifiController::class, 'update']);
+Route::get('/userwifi/{id}/del', [App\Http\Controllers\UserwifiController::class, 'delete']);
