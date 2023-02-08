@@ -14,7 +14,7 @@
 
 /* Style the sidenav links and the dropdown button */
 .sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
+  padding: 1px 1px 1px 7px;
   text-decoration: none;
   display: block;
   border: none;
@@ -71,20 +71,28 @@
         <!--{{ config('app.name', 'Laravel') }}--->
     </button>
 
-    <button class="dropdown-btn animate__animated animate__fadeInUp"><i class="material-icons">arrow_drop_down_circle</i> PAKET WIFI 
+    <button class="dropdown-btn animate__animated animate__fadeInUp">🔻 PAKET WIFI 
         <i class="fa fa-caret-down"></i>
     </button>
-      <div class="dropdown-container animate__animated animate__fadeInRight">
-        <a href="{{ asset('paketwifi') }}">- Data</a>
-        <a href="{{ asset('paketwifi/create') }}">- Tambah</a>
+      <div class="dropdown-container animate__animated animate__fadeInDown">
+        <a href="{{ asset('paketwifi') }}"><font style="color:red">├</font> Data</a>
+        <a href="{{ asset('paketwifi/create') }}"><font style="color:red">└</font> Tambah</a>
       </div>
 
-    <button class="dropdown-btn animate__animated animate__fadeInUp"><i class="material-icons">arrow_drop_down_circle</i> RUMAH PELANGGAN  
+    <button class="dropdown-btn animate__animated animate__fadeInUp">🔻 HOME USER  
         <i class="fa fa-caret-down"></i>
     </button>
-      <div class="dropdown-container animate__animated animate__fadeInRight">
-        <a href="{{ asset('datarumah') }}">- Data</a>
-        <a href="{{ asset('datarumah/create') }}">- Tambah</a>
+      <div class="dropdown-container animate__animated animate__fadeInDown">
+        <a href="{{ asset('datarumah') }}"><font style="color:red">├</font> Data</a>
+        <a href="{{ asset('datarumah/create') }}"><font style="color:red">└</font> Tambah</a>
+      </div>
+
+      <button class="dropdown-btn animate__animated animate__fadeInUp">🔻 HOTSPOT USER  
+        <i class="fa fa-caret-down"></i>
+    </button>
+      <div class="dropdown-container animate__animated animate__fadeInDown">
+        <a href="{{ asset('hotspotuser') }}"><font style="color:red">├</font> Data</a>
+        <a href="{{ asset('hotspotuser/create') }}"><font style="color:red">└</font> Tambah</a>
       </div>
 
         @guest
@@ -99,14 +107,14 @@
             @endif
         @else
             <button class="dropdown-btn animate__animated animate__fadeInUp">
-                <i class="material-icons">arrow_drop_down_circle</i> {{ Auth::user()->name }}
+                🔻 {{ Auth::user()->name }}
                 <i class="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-container animate__animated animate__fadeInRight">
+            <div class="dropdown-container animate__animated animate__fadeInDown">
                 <a href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-                    - {{ __('Logout') }}
+                    {{ __('Logout') }}
                 </a>
             </div>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

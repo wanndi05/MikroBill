@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'PAKET WIFI')
+@section('title', 'USERS HOTSPOT')
 @section('content')
 
 <div class='container'>

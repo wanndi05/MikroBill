@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'PAKET WIFI | Edit')
+@section('title', 'USER HOTSPOT | Edit')
 @section('content')
 
     @if($errors->any())
