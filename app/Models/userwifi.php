@@ -9,13 +9,10 @@ class userwifi extends Model
 {
     protected $table = 'userwifis';
     protected $fillable  = ['id',
-                            'nomor_hp',
+                            'id_rumah',
+                            'id_paket',
                             'username',
                             'password',
-                            'nama_paket',
-                            'harga',
-                            'lama_paket',
-                            'satuan_lama_paket',
                             'tgl_habis',
                             'created_at',
                             'updated_at'

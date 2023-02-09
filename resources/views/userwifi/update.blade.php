@@ -17,7 +17,7 @@
       @endif
 
 	<div class="container">
-		<form class="form-horizontal" action="{{ asset('paketwifi') }}" method="POST" enctype="multipart/form-data">
+		<form class="form-horizontal" action="{{ asset('userwifi') }}" method="POST" enctype="multipart/form-data">
 	    <div class="card">
         <div class="card-header">
           <div class="card-title">

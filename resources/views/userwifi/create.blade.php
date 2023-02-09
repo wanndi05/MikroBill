@@ -58,65 +58,36 @@
 					</div>
 
         	<div class="mb-3 animate__animated animate__fadeInUp">
-					  <label class="form-label" for="nama_paket">Nama Paket</label>
-					  <input required="required" type="text" class="form-control uppercase" name="nama_paket" placeholder="Isi form ..." autocomplete="off">
-					  <p class="help-block" align="right">{{ $errors->first('nama_paket') }}</p>
+					  <label class="form-label" for="id_rumah">ID Rumah</label>
+					  <input required="required" type="text" class="form-control uppercase" name="id_rumah" placeholder="Isi form ..." autocomplete="off">
+					  <p class="help-block" align="right">{{ $errors->first('id_rumah') }}</p>
 					</div>
 
           <div class="mb-3 animate__animated animate__fadeInUp">
-					  <label class="form-label" for="harga">Harga  (Rp.)</label>
-					  <input required="required" type="number" class="form-control" name="harga" placeholder="input tanpa titik/koma. Contoh : 55000">
-					  <p class="help-block" align="right">{{ $errors->first('harga') }}</p>
+					  <label class="form-label" for="id_paket">ID Paket</label>
+					  <input required="required" type="number" class="form-control" name="id_paket" placeholder="input tanpa titik/koma. Contoh : 55000">
+					  <p class="help-block" align="right">{{ $errors->first('id_paket') }}</p>
 					</div>
 
           <div class="mb-3 animate__animated animate__fadeInUp">
-					  <label class="form-label" for="harga_seller">Harga Reseller (Rp.)</label>
-					  <input required="required" type="number" class="form-control" name="harga_seller" placeholder="input tanpa titik/koma. Contoh : 55000">
-					  <p class="help-block" align="right">{{ $errors->first('harga_seller') }}</p>
-					</div>
+					  <label class="form-label" for="username">Username</label>
+					  <input required="required" type="number" class="form-control" name="username" placeholder="input tanpa titik/koma. Contoh : 55000">
+					  <p class="help-block" align="right">{{ $errors->first('username') }}</p>
+			</div>
 
-          <div class=" mb-3 animate__animated animate__fadeInUp">
-					  <label class="form-label" for="lama_paket">Masa Aktif</label>
-					  <div class="input-group">
-							<?php
-								$datetimenow = date_create()->format('Y-m-d H:i:s');
-								$jns_waktu=array(
-								 "Jam" => 'Jam',
-								 "Hari" => 'Hari',
-								 "Bulan" => 'Bulan', 
-								  );
-							?>
-
-							<select required="required" name="lama_paket" class="form-select">
-								<option>----waktu----</option>
-								<?php
-									foreach (range(1, 31) as $waktu) {
-									    echo '<option value="'.$waktu.'">'.$waktu.'</option>';
-									  }
-						    ?>
-							</select>
-
-							<select required="required" name="satuan_lama_paket" class="form-select">
-								<option>-satuan waktu-</option>
-								<?php
-								    asort($jns_waktu);
-								    reset($jns_waktu); 
-								    foreach($jns_waktu as $p => $w):
-								        echo '<option value="'.$p.'">'.$w.'</option>'; //close your tags!!
-								    endforeach;
-								?>
-							</select>
-
-							<!--input required="required" type="number" class="form-control" name="lama_paket" name="lama_paket" placeholder="input tanpa titik/koma"-->
-					  </div>
-					  <p class="help-block" align="right">{{ $errors->first('lama_paket') }}</p>
-					  <p class="help-block" align="right">{{ $errors->first('satuan_lama_paket') }}</p>
-					</div>
+			<div class="mb-3 animate__animated animate__fadeInUp">
+					  <label class="form-label" for="tgl_habis">tgl_habis</label>
+					  <input required="required" type="number" class="form-control" name="tgl_habis" placeholder="input tanpa titik/koma. Contoh : 55000">
+					  <p class="help-block" align="right">{{ $errors->first('tgl_habis') }}</p>
+			</div>
 
           <div class="mb-3 animate__animated animate__fadeInUp" hidden>
 					  <label class="form-label" for="created_at">Dibuat</label>
+					  	<?php 
+							$datetimenow = date_create()->format('Y-m-d H:i:s');
+						?>
 					  <input type="text" class="form-control" name="created_at" placeholder="{{ $datetimenow }}" value="{{ $datetimenow }}">
-					  <p class="help-block" align="right">{{ $errors->first('created_at') }}</p>
+						<p class="help-block" align="right">{{ $errors->first('created_at') }}</p>
 					</div>
 
           <div class="mb-3 animate__animated animate__fadeInUp" hidden>
