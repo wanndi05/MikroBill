@@ -36,7 +36,7 @@ class UserwifiController extends Controller
         return view('userwifi.index', ['data' => $query]);
     }
 
-    
+
    public function create()
     {
         $dateS = new Carbon('01-01-'.date('Y'));
@@ -111,13 +111,12 @@ class UserwifiController extends Controller
     public function update(Request $request, Userwifi $userwifi){
         $userwifi = new Userwifi;
         $userwifi = Userwifi::find($request->id);
-        $userwifi->no_urut           =$request->no_urut;
-        $userwifi->nama_paket        =$request->nama_paket;
-        $userwifi->harga             =$request->harga;
-        $userwifi->harga_seller      =$request->harga_seller;
-        $userwifi->lama_paket        =$request->lama_paket;
-        $userwifi->satuan_lama_paket =$request->satuan_lama_paket;
-        $userwifi->created_at        =$request->created_at;
+        $userwifi->id_rumah          =$request->id_rumah;
+        $userwifi->id_paket          =$request->id_paket;
+        $userwifi->username          =$request->username;
+        $userwifi->password          =$request->password    ;
+        $userwifi->tgl_habis         =$request->tgl_habis;
+        $userwifi->tgl_bayar         =$request->tgl_bayar;
         
         if(!empty($request->updated_at)){
             $input['updated_at'] = $request->updated_at;

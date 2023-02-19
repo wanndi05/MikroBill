@@ -31,7 +31,7 @@
         <div class="card-body">
           <div class="animate__animated animate__lightSpeedInLeft" align="right">
             <h2>
-            	<a href="{{ asset('paketwifi') }}" class="btn btn-outline-warning"><i class="material-icons">settings_backup_restore</i> Back</a>
+            	<a href="{{ asset('userwifi') }}" class="btn btn-outline-warning"><i class="material-icons">settings_backup_restore</i> Back</a>
 							<button type="reset" class="btn btn-outline-danger">&#8634; Reset</button>
 							<button type="submit" class="btn btn-primary">&#10004; Save</button>
             </h2>
@@ -65,7 +65,7 @@
 					</div>
 					<input type="text" class="form-control getRumah" placeholder="Cari data ..." autocomplete="off">
 				</div>
-
+				
 				<div class="input-group mb-3">
 					<div class="input-group-prepend">
 						<span class="input-group-text">&#128274;</span>
@@ -74,6 +74,8 @@
 				</div>
 				<p class="help-block" align="right">{{ $errors->first('id_rumah') }}</p>
 			</div>
+
+			<hr>
 
         	<div class="mb-3 animate__animated animate__fadeInUp">
 				<label class="form-label" for="id_paket">ID Paket</label>
@@ -93,6 +95,8 @@
 				<p class="help-block" align="right">{{ $errors->first('id_paket') }}</p>
 			</div>
 
+			<hr>
+			
 			<div class="mb-3 animate__animated animate__fadeInUp">
 				<div class="input-group mb-3">
 					<div class="input-group-prepend">

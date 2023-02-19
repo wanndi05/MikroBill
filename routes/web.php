@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WifirumahController;
+use App\Http\Controllers\ProfilpaketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::post('/paketwifi/create', [App\Http\Controllers\ProfilpaketController::cl
 Route::get('/paketwifi/{id}/edit', [App\Http\Controllers\ProfilpaketController::class, 'edit']);
 Route::post('/paketwifi', [App\Http\Controllers\ProfilpaketController::class, 'update']);
 Route::get('/paketwifi/{id}/del', [App\Http\Controllers\ProfilpaketController::class, 'delete']);
+Route::post('/getPaket', [App\Http\Controllers\ProfilpaketController::class, 'getPaket'])->name('getPaket');
 
 Route::get('/datarumah', [App\Http\Controllers\WifirumahController::class, 'index']);
 Route::get('/datarumah/create', [App\Http\Controllers\WifirumahController::class, 'create']);

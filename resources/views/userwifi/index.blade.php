@@ -66,7 +66,7 @@
 
               <div class="animate__animated animate__lightSpeedInRight" align="left">
                   <h2>
-                    <a class="btn btn-primary" href="{{asset('paketwifi/create')}}"><i class="material-icons">add_circle</i> Add</a>
+                    <a class="btn btn-primary" href="{{asset('userwifi/create')}}"><i class="material-icons">add_circle</i> Add</a>
                   </h2>
               </div>
                 <input class="form-control  animate__animated animate__fadeInUp" type="text" id="myInput" onkeyup="Search()" placeholder="Ketikan Paket..." title="Ketikan Paket">
@@ -79,6 +79,7 @@
                     <th class="animate__animated animate__lightSpeedInLeft">Username</th>
                     <th class="animate__animated animate__lightSpeedInLeft">Password</th>
                     <th class="animate__animated animate__lightSpeedInLeft">Tgl. Kadaluarsa</th>
+                    <th class="animate__animated animate__lightSpeedInLeft">Tgl. Bayar Terahir</th>
                     <th class="animate__animated animate__lightSpeedInLeft"></th>
                   @foreach($data as $x)
 
@@ -158,10 +159,10 @@
                         <td class="animate__animated animate__fadeInUp">{{ $x->username }}</td>
                         <td class="animate__animated animate__fadeInUp">{{ $x->password }}</td>
                         <td class="animate__animated animate__fadeInUp">{{ $x->tgl_habis }}</td>
-                        <td class="animate__animated animate__fadeInUp">{{ $x->tgl_sd_lunas }}</td>
+                        <td class="animate__animated animate__fadeInUp">{{ $x->tgl_bayar }}</td>
                         <td class="animate__animated animate__fadeInUp">
                           <div class="btn-group">
-                            <a class="btn btn-primary" href="{{asset('paketwifi/'.$x->id.'/edit')}}"><i class="material-icons">update</i> Update</a>
+                            <a class="btn btn-primary" href="{{asset('userwifi/'.$x->id.'/edit')}}"><i class="material-icons">update</i> Update</a>
 
 
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal{{$x->id}}">

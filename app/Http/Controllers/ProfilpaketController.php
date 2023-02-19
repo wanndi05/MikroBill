@@ -139,5 +139,23 @@ class ProfilpaketController extends Controller
         return view('profilpaket.index', ['data' => $query]);
         //return back();
     }
+
+    public function getPaket(Request $request){
+        $search = $request->search;
+
+        if($search == ''){
+            $Profilpaket = Profilpaket::orderby('nama_paket','asc')->select('id','nama_paket')->limit(5)->get();
+        }else{
+            $Profilpaket = Profilpaket::orderby('nama_paket','asc')->select('id','nama_paket')->where('nama_paket', 'like', '%' .$search . '%')->limit(5)->get();
+        }
+  
+        $response = array();
+        foreach($Profilpaket as $Profilpaket){
+           $response[] = array("value"=>$Profilpaket->id,"label"=>$Profilpaket->nama_paket);
+        }
+  
+        return response()->json($response); 
+     } 
+
 }
     
