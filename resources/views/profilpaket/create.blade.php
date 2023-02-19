@@ -53,7 +53,7 @@
 
           <div class="mb-3 animate__animated animate__fadeInUp">
 					  <label class="form-label" for="no_urut">Nomor</label>
-					  <input required="required" type="text" class="form-control" name="no_urut"  value="PRF{{ substr($autokode, -3, 6) }}" readonly style="cursor: not-allowed;">
+					  <input required="required" type="text" class="form-control" name="no_urut"  value="{{ substr($autokode, -3, 6) }}" readonly style="cursor: not-allowed;">
 					  <p class="help-block" align="right">{{ $errors->first('no_urut') }}</p>
 					</div>
 

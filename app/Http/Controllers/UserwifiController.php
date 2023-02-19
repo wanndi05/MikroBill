@@ -30,13 +30,14 @@ class UserwifiController extends Controller
     {
         $dateS = new Carbon('01-01-'.date('Y'));
         $dateE = new Carbon('31-12-'.date('Y'));
-        $query = Userwifi::orderBy('harga', 'asc')->get();
+        $query = Userwifi::orderBy('id_rumah', 'asc')->get();
         
         $data = new Userwifi;
         return view('userwifi.index', ['data' => $query]);
     }
 
-    public function create()
+    
+   public function create()
     {
         $dateS = new Carbon('01-01-'.date('Y'));
         $dateE = new Carbon('31-12-'.date('Y'));

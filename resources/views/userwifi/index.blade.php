@@ -74,10 +74,11 @@
                 <table id="myTable" striped bordered hover variant="dark">
                   <tr class="header">
                   </tr>
-                    <th class="animate__animated animate__lightSpeedInLeft">Nama Paket</th>
-                    <th class="animate__animated animate__lightSpeedInLeft">Harga (Rp.)</th>
-                    <th class="animate__animated animate__lightSpeedInLeft">Harga Reseller (Rp.)</th>
-                    <th class="animate__animated animate__lightSpeedInLeft">Masa Aktif</th>
+                    <th class="animate__animated animate__lightSpeedInLeft">Id Rumah</th>
+                    <th class="animate__animated animate__lightSpeedInLeft">Id Paket</th>
+                    <th class="animate__animated animate__lightSpeedInLeft">Username</th>
+                    <th class="animate__animated animate__lightSpeedInLeft">Password</th>
+                    <th class="animate__animated animate__lightSpeedInLeft">Tgl. Kadaluarsa</th>
                     <th class="animate__animated animate__lightSpeedInLeft"></th>
                   @foreach($data as $x)
 
@@ -152,10 +153,12 @@
                     // Output: Total selisih hari: 10398
                   ?>
                     <tr class="<?php echo$color_stats ?>">
-                        <td class="animate__animated animate__fadeInUp">{{ $x->nama_paket }}</td>
-                        <td class="animate__animated animate__fadeInUp">{{ number_format($x->harga, 2, ",", ".") }}</td>
-                        <td class="animate__animated animate__fadeInUp">{{ number_format($x->harga_seller, 2, ",", ".") }}</td>
-                        <td class="animate__animated animate__fadeInUp">{{ $x->lama_paket.' '.$x->satuan_lama_paket }}</td>
+                        <td class="animate__animated animate__fadeInUp">{{ $x->id_rumah }}</td>
+                        <td class="animate__animated animate__fadeInUp">{{ $x->id_paket }}</td>
+                        <td class="animate__animated animate__fadeInUp">{{ $x->username }}</td>
+                        <td class="animate__animated animate__fadeInUp">{{ $x->password }}</td>
+                        <td class="animate__animated animate__fadeInUp">{{ $x->tgl_habis }}</td>
+                        <td class="animate__animated animate__fadeInUp">{{ $x->tgl_sd_lunas }}</td>
                         <td class="animate__animated animate__fadeInUp">
                           <div class="btn-group">
                             <a class="btn btn-primary" href="{{asset('paketwifi/'.$x->id.'/edit')}}"><i class="material-icons">update</i> Update</a>

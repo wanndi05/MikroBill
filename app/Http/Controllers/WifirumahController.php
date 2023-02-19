@@ -125,5 +125,23 @@ class WifirumahController extends Controller
         return view('rumah.index', ['data' => $query]);
         //return back();
     }
+
+    public function getRumah(Request $request){
+        $search = $request->search;
+
+        if($search == ''){
+            $Wifirumah = Wifirumah::orderby('nama_rumah','asc')->select('id','nama_rumah')->limit(5)->get();
+        }else{
+            $Wifirumah = Wifirumah::orderby('nama_rumah','asc')->select('id','nama_rumah')->where('nama_rumah', 'like', '%' .$search . '%')->limit(5)->get();
+        }
+  
+        $response = array();
+        foreach($Wifirumah as $wifirumah){
+           $response[] = array("value"=>$wifirumah->id,"label"=>$wifirumah->nama_rumah);
+        }
+  
+        return response()->json($response); 
+     } 
+
 }
     

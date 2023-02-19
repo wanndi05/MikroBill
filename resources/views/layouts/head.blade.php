@@ -10,7 +10,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/w3.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('plugins/jQuery/jquery-ui.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery-ui.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery-ui.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery-ui.structure.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery-ui.structure.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery-ui.theme.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery-ui.theme.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/animate/animate.min.css') }}" rel="stylesheet">
     <!--link href="{{ asset('plugins/notify/styles/metro/notify-metro.css') }}" rel="stylesheet" />
     <link

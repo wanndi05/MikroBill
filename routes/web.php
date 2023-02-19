@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WifirumahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ Route::post('/datarumah/create', [App\Http\Controllers\WifirumahController::clas
 Route::get('/datarumah/{id}/edit', [App\Http\Controllers\WifirumahController::class, 'edit']);
 Route::post('/datarumah', [App\Http\Controllers\WifirumahController::class, 'update']);
 Route::get('/datarumah/{id}/del', [App\Http\Controllers\WifirumahController::class, 'delete']);
+Route::post('/getRumah', [App\Http\Controllers\WifirumahController::class, 'getRumah'])->name('getRumah');
 
 Route::get('/userwifi', [App\Http\Controllers\UserwifiController::class, 'index']);
 Route::get('/userwifi/create', [App\Http\Controllers\UserwifiController::class, 'create']);
