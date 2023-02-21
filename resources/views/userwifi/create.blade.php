@@ -122,7 +122,7 @@
 					<div class="input-group-prepend">
 						<span class="input-group-text">&#128197;</span>
 					</div>
-					<input required="required" type="text" class="form-control mikrotik_date" name="tgl_habis" placeholder="Tanggal Kadaluarsa">
+					<input required="required" autocomplete="off" type="text" class="form-control mikrotik_date" name="tgl_habis" placeholder="Tanggal Kadaluarsa">
 				</div>
 				<p class="help-block" align="right">{{ $errors->first('tgl_habis') }}</p>
 			</div>
@@ -132,7 +132,7 @@
 					<div class="input-group-prepend">
 						<span class="input-group-text">&#128197;</span>
 					</div>
-					<input required="required" type="text" class="form-control mikrotik_date" name="tgl_bayar" placeholder="Tanggal pembayaran terakhir">
+					<input required="required" autocomplete="off" type="text" class="form-control mikrotik_date" name="tgl_bayar" placeholder="Tanggal pembayaran terakhir">
 				</div>
 				<p class="help-block" align="right">{{ $errors->first('tgl_bayar') }}</p>
 			</div>

@@ -29,7 +29,7 @@
             //showOn: 'button',
             //buttonImageOnly: true,
             //buttonImage: '{{ asset('plugins/jQuery/datepicker/calendar.gif') }}',
-            dateFormat: 'M/dd/yy'
+            dateFormat: 'yy/mm/dd'
         });
     });
 

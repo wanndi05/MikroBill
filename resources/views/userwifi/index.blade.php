@@ -74,13 +74,13 @@
                 <table id="myTable" striped bordered hover variant="dark">
                   <tr class="header">
                   </tr>
-                    <th class="animate__animated animate__lightSpeedInLeft">Id Rumah</th>
-                    <th class="animate__animated animate__lightSpeedInLeft">Id Paket</th>
-                    <th class="animate__animated animate__lightSpeedInLeft">Username</th>
-                    <th class="animate__animated animate__lightSpeedInLeft">Password</th>
-                    <th class="animate__animated animate__lightSpeedInLeft">Tgl. Kadaluarsa</th>
-                    <th class="animate__animated animate__lightSpeedInLeft">Tgl. Bayar Terahir</th>
-                    <th class="animate__animated animate__lightSpeedInLeft"></th>
+                  <th class="animate__animated animate__lightSpeedInLeft">Username</th>
+                  <th class="animate__animated animate__lightSpeedInLeft">Password</th>
+                  <th class="animate__animated animate__lightSpeedInLeft">Id Rumah</th>
+                  <th class="animate__animated animate__lightSpeedInLeft">Id Paket</th>
+                  <th class="animate__animated animate__lightSpeedInLeft">Tgl. Kadaluarsa</th>
+                  <th class="animate__animated animate__lightSpeedInLeft">Tgl. Bayar Terahir</th>
+                  <th class="animate__animated animate__lightSpeedInLeft"></th>
                   @foreach($data as $x)
 
                   <?php
@@ -154,10 +154,10 @@
                     // Output: Total selisih hari: 10398
                   ?>
                     <tr class="<?php echo$color_stats ?>">
-                        <td class="animate__animated animate__fadeInUp">{{ $x->id_rumah }}</td>
-                        <td class="animate__animated animate__fadeInUp">{{ $x->id_paket }}</td>
-                        <td class="animate__animated animate__fadeInUp">{{ $x->username }}</td>
-                        <td class="animate__animated animate__fadeInUp">{{ $x->password }}</td>
+                      <td class="animate__animated animate__fadeInUp">{{ $x->username }}</td>
+                      <td class="animate__animated animate__fadeInUp">{{ $x->password }}</td>
+                      <td class="animate__animated animate__fadeInUp">{{ $x->id_rumah }}</td>
+                      <td class="animate__animated animate__fadeInUp">{{ $x->id_paket }}</td>
                         <td class="animate__animated animate__fadeInUp">{{ $x->tgl_habis }}</td>
                         <td class="animate__animated animate__fadeInUp">{{ $x->tgl_bayar }}</td>
                         <td class="animate__animated animate__fadeInUp">
