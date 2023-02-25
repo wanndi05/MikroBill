@@ -6,7 +6,6 @@
 </head>
 <body>
     <div id="app">
-        @guest
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -39,6 +38,21 @@
                                 </li>
                             @endif
                         @else
+                        <li class="nav-item dropdown">
+                                <a id="navbarDropdownDataRumah" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    RUMAH
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownDataRumah">
+                                    <a class="dropdown-item" href="{{asset('datarumah')}}">
+                                        Data
+                                    </a>
+                                    <a class="dropdown-item" href="{{asset('datarumah/create')}}">
+                                        Tambah Data
+                                    </a>
+                                </div>
+                            </li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -61,9 +75,6 @@
                 </div>
             </div>
         </nav>
-        @else
-            @include('layouts.sidebar')
-        @endguest
         <main class="py-4">
             @yield('content')
         </main>

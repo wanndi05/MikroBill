@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WifirumahController;
 use App\Http\Controllers\ProfilpaketController;
+use App\Http\Controllers\UserwifiController;
 
 /*
 |--------------------------------------------------------------------------

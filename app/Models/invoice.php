@@ -13,9 +13,12 @@ class invoice extends Model
                             'username',
                             'id_rumah',
                             'id_paket',
+                            'tgl_habis',
+                            'tgl_bayar',
                             'harga',
                             'harga_seller',
                             'track_bill',
+                            'status',
                             'created_at',
                             'updated_at',
                             ];
