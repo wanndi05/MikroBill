@@ -18,10 +18,56 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                    @guest
+                    @else
+                    <a href="{{asset('home')}}" class="nav-link" style="color:#000">
+                        <i class="material-icons">home</i> 
+                    </a>
                     <ul class="navbar-nav me-auto">
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdownDataRumah" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <i class="material-icons">menu</i> DATA RUMAH
+                            </a>
 
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownDataRumah">
+                                <a class="dropdown-item" href="{{asset('datarumah')}}">
+                                    Data
+                                </a>
+                                <a class="dropdown-item" href="{{asset('datarumah/create')}}">
+                                    Tambah Data
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdownDataUser" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <i class="material-icons">people</i> PELANGGAN
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownDataUser">
+                                <a class="dropdown-item" href="{{asset('userwifi')}}">
+                                    Data
+                                </a>
+                                <a class="dropdown-item" href="{{asset('userwifi/create')}}">
+                                    Tambah Data
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdownDataPaketWifi" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <i class="material-icons">menu</i> PAKET
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownDataPaketWifi">
+                                <a class="dropdown-item" href="{{asset('paketwifi')}}">
+                                    Data
+                                </a>
+                                <a class="dropdown-item" href="{{asset('paketwifi/create')}}">
+                                    Tambah Data
+                                </a>
+                            </div>
+                        </li>
                     </ul>
-
+                    @endguest
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
@@ -38,24 +84,9 @@
                                 </li>
                             @endif
                         @else
-                        <li class="nav-item dropdown">
-                                <a id="navbarDropdownDataRumah" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    RUMAH
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownDataRumah">
-                                    <a class="dropdown-item" href="{{asset('datarumah')}}">
-                                        Data
-                                    </a>
-                                    <a class="dropdown-item" href="{{asset('datarumah/create')}}">
-                                        Tambah Data
-                                    </a>
-                                </div>
-                            </li>
-
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    <i class="material-icons">person</i> {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

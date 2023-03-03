@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'PAKET WIFI | Tambah')
+@section('title', 'Tambah Paket Wifi')
 @section('content')
 
     @if($errors->any())
@@ -20,7 +20,7 @@
 
 	<div class="container">
 		<form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
-	    <div class="card">
+	    <div class="card bg-fark text-white">
         <div class="card-header">
           <div class="card-title">
             <div class="justify-content-md-center">

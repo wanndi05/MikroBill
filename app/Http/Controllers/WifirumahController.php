@@ -130,14 +130,14 @@ class WifirumahController extends Controller
         $search = $request->search;
 
         if($search == ''){
-            $Wifirumah = Wifirumah::orderby('nama_rumah','asc')->select('id','nama_rumah')->limit(5)->get();
+            $Wifirumah = Wifirumah::orderby('nama_rumah','asc')->select('id','nama_rumah','penanggungjawab')->limit(5)->get();
         }else{
-            $Wifirumah = Wifirumah::orderby('nama_rumah','asc')->select('id','nama_rumah')->where('nama_rumah', 'like', '%' .$search . '%')->limit(5)->get();
+            $Wifirumah = Wifirumah::orderby('nama_rumah','asc')->select('id','nama_rumah','penanggungjawab')->where('nama_rumah', 'like', '%' .$search . '%')->limit(5)->get();
         }
   
         $response = array();
         foreach($Wifirumah as $wifirumah){
-           $response[] = array("value"=>$wifirumah->id,"label"=>$wifirumah->nama_rumah);
+           $response[] = array("value"=>$wifirumah->id,"label"=>$wifirumah->nama_rumah." - ".$wifirumah->penanggungjawab." - ".$wifirumah->id);
         }
   
         return response()->json($response); 

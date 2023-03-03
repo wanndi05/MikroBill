@@ -7,9 +7,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!--link href="{{ asset('css/app.css') }}" rel="stylesheet"-->
     <link href="{{ asset('css/w3.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/bootstrap-5.2.3-dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery-ui.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery-ui.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery-ui.structure.min.css') }}" rel="stylesheet">

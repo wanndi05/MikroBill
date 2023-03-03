@@ -1,6 +1,6 @@
 {{-- Plugins --}}
 <!--script src="{{ mix('js/app.js') }}"></script-->
-<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('plugins/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('plugins/jQuery/jquery-3.2.1.min.js') }}"></script>
 <script src="{{ asset('plugins/jQuery/jquery-ui-1.9.2.custom.min.js') }}"></script>
 <script src="{{ asset('plugins/jQuery/jquery-ui.js') }}"></script>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'PAKET WIFI | Edit')
+@section('title', 'Ubah Paket Wifi')
 @section('content')
 
     @if($errors->any())
@@ -18,7 +18,7 @@
 
 	<div class="container">
 		<form class="form-horizontal" action="{{ asset('paketwifi') }}" method="POST" enctype="multipart/form-data">
-	    <div class="card">
+	    <div class="card bg-dark text-white">
         <div class="card-header">
           <div class="card-title">
             <div class="justify-content-md-center">
