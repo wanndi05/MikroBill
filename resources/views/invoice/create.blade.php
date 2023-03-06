@@ -31,8 +31,8 @@
 				<div class="card-body">
 					<div class="animate__animated animate__lightSpeedInLeft" align="right">
 						<h2>
-							<a href="{{ asset('userwifi') }}" class="btn btn-outline-warning"><i class="material-icons">keyboard_backspace</i> Back</a>
-										<button type="reset" class="btn btn-outline-danger"><i class="material-icons">repeat</i> Reset</button>
+							<a href="{{ asset('userwifi') }}" class="btn btn-outline-warning"><i class="fas fa-caret-left"></i> Back</a>
+										<button type="reset" class="btn btn-outline-danger"><i class="fas fa-undo"></i> Reset</button>
 										<button type="submit" class="btn btn-primary"><i class="material-icons">check</i> Save</button>
 						</h2>
 					</div>

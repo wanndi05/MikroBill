@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WifirumahController;
 use App\Http\Controllers\ProfilpaketController;
 use App\Http\Controllers\UserwifiController;
+use App\Http\Controllers\InvoiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +47,10 @@ Route::post('/userwifi/create', [App\Http\Controllers\UserwifiController::class,
 Route::get('/userwifi/{id}/edit', [App\Http\Controllers\UserwifiController::class, 'edit']);
 Route::post('/userwifi', [App\Http\Controllers\UserwifiController::class, 'update']);
 Route::get('/userwifi/{id}/del', [App\Http\Controllers\UserwifiController::class, 'delete']);
+
+Route::get('/invoice', [App\Http\Controllers\InvoiceController::class, 'index']);
+Route::get('/invoice/create', [App\Http\Controllers\InvoiceController::class, 'create']);
+Route::post('/invoice/create', [App\Http\Controllers\InvoiceController::class, 'store']);
+Route::get('/invoice/{id}/edit', [App\Http\Controllers\InvoiceController::class, 'edit']);
+Route::post('/invoice', [App\Http\Controllers\InvoiceController::class, 'update']);
+Route::get('/invoice/{id}/del', [App\Http\Controllers\UserwifiController::class, 'delete']);

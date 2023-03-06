@@ -20,7 +20,7 @@
 
 	<div class="container">
 		<form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
-	    <div class="card bg-fark text-white">
+	    <div class="card bg-dark text-white">
         <div class="card-header">
           <div class="card-title">
             <div class="justify-content-md-center">

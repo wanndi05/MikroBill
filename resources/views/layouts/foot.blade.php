@@ -5,6 +5,7 @@
 <script src="{{ asset('plugins/jQuery/jquery-ui-1.9.2.custom.min.js') }}"></script>
 <script src="{{ asset('plugins/jQuery/jquery-ui.js') }}"></script>
 <script src="{{ asset('plugins/jQuery/countMe/countMe.min.js') }}"></script>
+<script src="{{ asset('plugins/font-awesome5/font-awesome.js') }}" crossorigin="anonymous"></script>
 <!--script src="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery.min.js') }}"></script-->
 <!--script src="{{ asset('plugins/jQuery/jquery-ui-1.13.2.custom/jquery.ui.js') }}"></script>
 <script src="{{ asset('plugins/notify/notify.js') }}"></script>

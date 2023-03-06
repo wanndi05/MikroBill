@@ -20,13 +20,13 @@
                     <!-- Left Side Of Navbar -->
                     @guest
                     @else
-                    <a href="{{asset('home')}}" class="nav-link" style="color:#000">
-                        <i class="material-icons">home</i> 
-                    </a>
                     <ul class="navbar-nav me-auto">
+                        <a href="{{asset('home')}}" class="nav-link" style="color:#000">
+                            <i class="fas fa-home"></i> Home
+                        </a>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdownDataRumah" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <i class="material-icons">menu</i> DATA RUMAH
+                                <i class="fas fa-house-user"></i> Rumah Pelanggan
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownDataRumah">
@@ -40,7 +40,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdownDataUser" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <i class="material-icons">people</i> PELANGGAN
+                                <i class="fas fa-users"></i> Pelanggan
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownDataUser">
@@ -54,7 +54,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdownDataPaketWifi" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <i class="material-icons">menu</i> PAKET
+                                <i class="fas fa-wifi"></i> Paket Wifi
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownDataPaketWifi">
@@ -62,6 +62,20 @@
                                     Data
                                 </a>
                                 <a class="dropdown-item" href="{{asset('paketwifi/create')}}">
+                                    Tambah Data
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdownDataPaketWifi" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <i class="far fa-money-bill-alt"></i> Invoice
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownDataPaketWifi">
+                                <a class="dropdown-item" href="{{asset('invoice')}}">
+                                    Data
+                                </a>
+                                <a class="dropdown-item" href="{{asset('invoice/create')}}">
                                     Tambah Data
                                 </a>
                             </div>
@@ -86,7 +100,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class="material-icons">person</i> {{ Auth::user()->name }}
+                                    <i class="fas fa-user"></i> {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

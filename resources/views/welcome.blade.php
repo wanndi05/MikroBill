@@ -59,7 +59,6 @@
     <body class="antialiased">
 
     <div id="app">
-        @guest
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -117,10 +116,6 @@
                 </div>
             </div>
         </nav>
-
-        @else
-            @include('layouts.sidebar')
-        @endguest
 
         <main class="py-4">
             @yield('content')
