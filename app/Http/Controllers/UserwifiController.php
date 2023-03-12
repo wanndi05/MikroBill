@@ -111,6 +111,7 @@ class UserwifiController extends Controller
     public function update(Request $request, Userwifi $userwifi){
         $userwifi = new Userwifi;
         $userwifi = Userwifi::find($request->id);
+        $userwifi->no_urut           =$request->no_urut;
         $userwifi->id_rumah          =$request->id_rumah;
         $userwifi->id_paket          =$request->id_paket;
         $userwifi->username          =$request->username;

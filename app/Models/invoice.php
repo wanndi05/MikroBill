@@ -13,6 +13,7 @@ class invoice extends Model
                             'username',
                             'id_rumah',
                             'id_paket',
+                            'id_user',
                             'tgl_habis',
                             'tgl_bayar',
                             'harga',

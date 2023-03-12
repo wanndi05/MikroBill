@@ -96,7 +96,9 @@ class InvoiceController extends Controller
 
         $invoice->no_urut       =$request->no_urut;
         $invoice->username      =$request->username;
+        $invoice->id_paket      =$request->id_rumah;
         $invoice->id_paket      =$request->id_paket;
+        $invoice->id_paket      =$request->id_user;
         $invoice->tgl_habis     =$request->tgl_habis;
         $invoice->tgl_bayar     =$request->tgl_bayar;
         $invoice->harga         =$request->harga;
